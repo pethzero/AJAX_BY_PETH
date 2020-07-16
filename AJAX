@@ -1,1 +1,15 @@
-ปูพื้น
+ตัวอย่างในการ ใช้ AJAX ใน DJANGO
+
+$.ajax({
+    url: '/api_peth/', //ดึข้อมูลจาก DJANGO เวลาแปลงเป็น JSON แล้ว
+    type: 'GET',
+    success: function (result) {
+      x1 = (result['order_id']) คล้ายๆ JS x1 คือ ตัวแปร result['order_id'] เป็นการเรียกใช้  order_id ที่เป็น JSON แล้ว ตัวอย่าง x1 = ["a","b"]  เพราะ order_id อยู่ในรูป JSON มีข้อมูล ["a"]
+      $("#OD").html(x1) การอ้างอิง id เวลาจะแสดง เช่น <p id="OD"> xx <p> โดย ปกติมันจะแสดง xx แต่เมื่อเรียกใช้ จะทำให้ xx หายไป เหลือแต่ OD 
+      
+      $("#ZX").click(function(){  ตัวอย่างคลิก
+      alert("The paragraph was clicked.");
+      })
+     //END
+    }
+})
